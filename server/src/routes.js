@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/median-prime/:userNumber', (req, res, next) => {
   const { userNumber } = req.params;
 
-  if (Boolean(parseInt(userNumber))) {
+  if (Boolean(Number(userNumber))) {
     try {
       let median;
       const primeSet = eratosthenes(userNumber);
