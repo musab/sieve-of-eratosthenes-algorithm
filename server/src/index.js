@@ -11,16 +11,17 @@ app.get('/median-prime/:userNumber', (req, res, next) => {
 
   if (Boolean(parseInt(userNumber))) {
     try {
+      let median;
       const primeSet = eratosthenes(userNumber);
-      const median = getMedian(primeSet);
+      if (primeSet.length) {
+        median = getMedian(primeSet);
+      }
 
       res.json({ median });
     } catch (error) {
       err.statusCode = 500;
       next(err);
     }
-
-    // console.log(med);
   } else {
     let err = new Error(`Bad Request`);
     err.statusCode = 400;
