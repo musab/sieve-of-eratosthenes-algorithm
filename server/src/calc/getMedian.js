@@ -3,6 +3,7 @@ export const getMedian = nums => {
   let median = 0;
 
   // determine if length of nums is even or odd
+  // if even return more left and right of median
   if (numsLen % 2 === 0) {
     median = [nums[numsLen / 2 - 1], nums[numsLen / 2]];
   } else {

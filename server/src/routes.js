@@ -1,6 +1,6 @@
 import express from 'express';
-import { eratosthenes } from './utils/eratosthenes';
-import { getMedian } from './utils/getMedian';
+import { eratosthenes } from './calc/eratosthenes';
+import { getMedian } from './calc/getMedian';
 
 const router = express.Router();
 
