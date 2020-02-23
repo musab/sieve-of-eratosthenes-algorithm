@@ -1,30 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import useFetch from 'react-fetch-hook';
 
 export const App = () => {
   const [userNumber, setUserNumber] = useState(0);
-  const [median, setMedian] = useState({});
-  const [hasError, setErrors] = useState(false);
-
-  useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(`https://swapi.co/api/planets/${userNumber}/`);
-      res
-        .json()
-        .then(res => setMedian(res))
-        .catch(err => setErrors(err));
-    }
-
-    userNumber && fetchData();
+  const { isLoading, data, error } = useFetch(`/median-prime/${userNumber}/`, {
+    depends: [userNumber]
   });
-
-  const handleChange = event => {
-    setUserNumber(event.target.value);
-  };
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(userNumber);
+    setUserNumber(event.target[0].value);
   };
 
   return (
@@ -33,25 +19,22 @@ export const App = () => {
       <div className="App-body">
         <p>Enter a number to find the median from a set of prime number(s)</p>
         <form onSubmit={handleSubmit}>
-          <input
-            onChange={handleChange}
-            value={userNumber}
-            type="number"
-            min="0"
-          />
+          <input type="number" min="0" />
           <button type="submit" className="submitBtn">
             Submit
           </button>
         </form>
-        <div>
-          <span>...computing...</span>
-          <br />
-          <progress></progress>
-        </div>
+        {isLoading && (
+          <div>
+            <span>...computing...</span>
+            <br />
+            <progress></progress>
+          </div>
+        )}
         <div className="card">
           <h3>FOUND</h3>
-          <code>{JSON.stringify(median)}</code>
-          <code>{JSON.stringify(hasError)}</code>
+          <code>{JSON.stringify(data)}</code>
+          {error && <code>{JSON.stringify(error)}</code>}
         </div>
       </div>
     </div>
