@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import './App.css';
+import { NumberInput } from './components/NumberInput';
+import { LoaderBar } from './components/LoaderBar';
+import { Result } from './components/Result';
 import useFetch from 'react-fetch-hook';
+
+const apiPath = `/median-prime`;
 
 export const App = () => {
   const [userNumber, setUserNumber] = useState(0);
-  const { isLoading, data, error } = useFetch(`/median-prime/${userNumber}/`, {
+  const { isLoading, data, error } = useFetch(`${apiPath}/${userNumber}`, {
     depends: [userNumber]
   });
 
@@ -17,25 +22,9 @@ export const App = () => {
     <div className="App">
       <header>musa barighzaai // musa_b@icloud.com</header>
       <div className="App-body">
-        <p>Enter a number to find the median from a set of prime number(s)</p>
-        <form onSubmit={handleSubmit}>
-          <input type="number" min="0" />
-          <button type="submit" className="submitBtn">
-            Submit
-          </button>
-        </form>
-        {isLoading && (
-          <div>
-            <span>...computing...</span>
-            <br />
-            <progress></progress>
-          </div>
-        )}
-        <div className="card">
-          <h3>FOUND</h3>
-          <code>{JSON.stringify(data)}</code>
-          {error && <code>{JSON.stringify(error)}</code>}
-        </div>
+        <NumberInput handleSubmit={handleSubmit} />
+        {isLoading && <LoaderBar />}
+        {<Result data={data} error={error} />}
       </div>
     </div>
   );
