@@ -2,6 +2,10 @@
 // Eratosthenes algorithm to find all primes under n
 
 export const eratosthenes = n => {
+  if (n < 1 || !Number(n)) {
+    throw new Error('Must supply a Number that is greater than 1');
+  }
+
   const array = [];
   const output = [];
   const upperLimit = Math.sqrt(n);

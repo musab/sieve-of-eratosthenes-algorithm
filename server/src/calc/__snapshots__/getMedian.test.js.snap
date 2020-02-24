@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getMedian if called with empty array throws error 1`] = `"Must supply an Array of numbers"`;
+exports[`getMedian if called with empty array throws error 1`] = `"Must supply an Array of Numbers"`;
 
-exports[`getMedian if called with non array type throws error 1`] = `"Must supply an Array of numbers"`;
+exports[`getMedian if called with non array type throws error 1`] = `"Must supply an Array of Numbers"`;
