@@ -13,7 +13,7 @@ The application is fully dockerized, and is the easiest way to start the applica
 From the root directory run:
 
 ```bash
-docker-compose up
+docker-compose up --build
 ```
 
 > Ensure you have Docker Desktop running.
@@ -35,6 +35,8 @@ cd client
 npm install
 npm start
 ```
+
+The frontend can be accessed via `http://localhost:3000`.
 
 ### Misc
 
