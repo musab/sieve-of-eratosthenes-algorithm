@@ -14,7 +14,7 @@ npm install
 npm start
 ```
 
-Once the server is running, start the client
+Once the server is running, in a seperate tab start the client
 
 ```
 cd client

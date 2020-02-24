@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel build run",
+    "start": "npm-run-all --sequential build run",
     "run": "nodemon ./dist/bundle.js",
     "build": "webpack --mode=development",
     "test": "jest --forceExit --silent"
