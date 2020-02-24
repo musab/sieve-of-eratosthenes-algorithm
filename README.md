@@ -6,20 +6,6 @@
 
 ### Setup
 
-**The Docker Way**
-
-The application is fully dockerized, and is the easiest way to start the application.
-
-From the root directory run:
-
-```bash
-docker-compose up --build
-```
-
-> Ensure you have Docker Desktop running.
-
-**The Non Docker Way**
-
 Begin by running the node server:
 
 ```
@@ -36,7 +22,7 @@ npm install
 npm start
 ```
 
-The frontend can be accessed via `http://localhost:3000`.
+The client can then be accessed via `http://localhost:3000`.
 
 ### Misc
 
