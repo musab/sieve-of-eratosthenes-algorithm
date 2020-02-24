@@ -16,7 +16,7 @@ router.get('/median-prime/:userNumber', (req, res, next) => {
       }
 
       res.json({ median });
-    } catch (error) {
+    } catch (err) {
       err.statusCode = 500;
       next(err);
     }

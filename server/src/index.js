@@ -5,7 +5,7 @@ import middleware from './middleware';
 
 require('dotenv').config();
 
-const app = express();
+export const app = express();
 
 // log all requests
 app.use(
