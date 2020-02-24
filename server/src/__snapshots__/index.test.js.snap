@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GET /median-prime /median-prime responds with 404 1`] = `"The server has not found anything matching the Request-URI \\"/median-prime\\"."`;
+
+exports[`GET /notfound /notfound responds with 404 1`] = `"The server has not found anything matching the Request-URI \\"/notfound\\"."`;
