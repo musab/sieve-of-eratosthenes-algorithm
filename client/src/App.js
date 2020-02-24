@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import { NumberInput } from './components/NumberInput';
-import { LoaderBar } from './components/LoaderBar';
 import { Result } from './components/Result';
 import useFetch from 'react-fetch-hook';
 
@@ -23,8 +22,7 @@ export const App = () => {
       <header>musa barighzaai // musa_b@icloud.com</header>
       <div className="App-body">
         <NumberInput handleSubmit={handleSubmit} />
-        {isLoading && <LoaderBar />}
-        {<Result data={data} error={error} />}
+        <Result data={data} error={error} isLoading={isLoading} />
       </div>
     </div>
   );

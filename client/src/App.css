@@ -25,6 +25,13 @@
 
 .card {
   margin-top: 50px;
+  position: relative;
+  display: flex;
+  background: #17141d;
+  color: #c2c2c2;
+  box-shadow: 0 4px 80px #070509;
+  padding: 40px 80px;
+  border-radius: 16px;
 }
 
 input {

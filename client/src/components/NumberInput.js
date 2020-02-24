@@ -5,7 +5,7 @@ export const NumberInput = ({ handleSubmit }) => {
     <>
       <p>Enter a number to find the median from a set of prime number(s)</p>
       <form onSubmit={handleSubmit}>
-        <input type="number" min="1" />
+        <input type="number" min="1" defaultValue={1} />
         <button type="submit" className="submitBtn">
           Submit
         </button>
