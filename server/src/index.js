@@ -2,10 +2,12 @@ import express from 'express';
 import morgan from 'morgan';
 import routes from './routes';
 import middleware from './middleware';
-
+var cors = require('cors');
 require('dotenv').config();
 
 export const app = express();
+
+app.use(cors());
 
 // log all requests
 app.use(

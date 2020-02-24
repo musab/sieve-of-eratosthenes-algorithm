@@ -4,13 +4,17 @@ import { NumberInput } from './components/NumberInput';
 import { Result } from './components/Result';
 import useFetch from 'react-fetch-hook';
 
-const apiPath = `/median-prime`;
+const apiHost = `http://localhost:8080`;
+const apiPath = `median-prime`;
 
 export const App = () => {
   const [userNumber, setUserNumber] = useState(0);
-  const { isLoading, data, error } = useFetch(`${apiPath}/${userNumber}`, {
-    depends: [userNumber]
-  });
+  const { isLoading, data, error } = useFetch(
+    `${apiHost}/${apiPath}/${userNumber}`,
+    {
+      depends: [userNumber]
+    }
+  );
 
   const handleSubmit = event => {
     event.preventDefault();
