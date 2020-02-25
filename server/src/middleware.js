@@ -7,9 +7,9 @@ export default {
     res.status(err.statusCode).send(err.message);
   },
   notFound: (req, res, next) => {
-    let err = new Error(
-      `The server has not found anything matching the Request-URI "${req.originalUrl}".`
-    );
+    const errorMsg = `The server has not found anything matching the Request-URI "${req.originalUrl}".`;
+    let err = new Error(errorMsg);
+
     err.statusCode = 404;
     next(err);
   }

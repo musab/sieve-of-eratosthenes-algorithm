@@ -29,7 +29,7 @@ describe('eratosthenes', () => {
     expect(eratosthenes(input)).toStrictEqual(expected);
   });
 
-  test('throws if called unparsable Number ', () => {
+  test('throws if called with NaN', () => {
     const input = 'x1x';
     function passString() {
       eratosthenes(input);

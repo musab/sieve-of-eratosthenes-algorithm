@@ -4,7 +4,7 @@
 
 - node (I'm working on v12.16.1)
 
-### Setup
+### Installation instructions
 
 Begin by running the node server:
 
@@ -24,7 +24,7 @@ npm start
 
 The client can then be accessed via `http://localhost:3000`.
 
-### Misc
+#### Running tests
 
 To run the tests, in either `server` or `client` execute the following:
 
@@ -32,14 +32,23 @@ To run the tests, in either `server` or `client` execute the following:
 npm test
 ```
 
+The server also includes integration test under `src/index.test.js`, which spins up the express app using `supertest`.
+
+### Technolgoy used
+
+Frontend:
+
+- Scaffolded via create-react-app
+- React, Webpack, Babel, Jest
+
+Backend
+
+- Express, Webpack, Babel, Jest, supertest
+
 ---
 
 ### Questions
 
 Musa Barighzaai
 <br>
-4162705190
-<br>
 mbarighzaai@icloud.com
-<br>
-[http://github.com/musab](http://github.com/musab)

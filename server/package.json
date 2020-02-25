@@ -10,7 +10,7 @@
     "test": "jest --forceExit --silent"
   },
   "keywords": [],
-  "author": "",
+  "author": "musa barighzaai",
   "jest": {
     "transform": {
       "^.+\\.js$": "babel-jest"

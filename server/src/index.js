@@ -7,6 +7,7 @@ require('dotenv').config();
 
 export const app = express();
 
+// development purpose only, allow CORS
 app.use(cors());
 
 // log all requests
