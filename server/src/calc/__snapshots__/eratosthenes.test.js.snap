@@ -2,4 +2,4 @@
 
 exports[`eratosthenes throws if called negative Number 1`] = `"Must supply a Number that is greater than 1"`;
 
-exports[`eratosthenes throws if called unparsable Number  1`] = `"Must supply a Number that is greater than 1"`;
+exports[`eratosthenes throws if called with NaN 1`] = `"Must supply a Number that is greater than 1"`;
