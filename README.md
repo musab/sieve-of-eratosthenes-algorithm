@@ -6,7 +6,7 @@
 
 ### Installation instructions
 
-Begin by running the node server:
+Begin by cloning this repo, and running the node server
 
 ```
 cd server
@@ -14,7 +14,7 @@ npm install
 npm start
 ```
 
-Once the server is running, in a seperate tab start the client
+Once the server is running, you need to start the client (run in seperate terminal tab)
 
 ```
 cd client
@@ -32,7 +32,7 @@ To run the tests, in either `server` or `client` execute the following:
 npm test
 ```
 
-The server also includes integration test under `src/index.test.js`, which spins up the express app using `supertest`.
+The server also includes integration test under `src/index.test.js`, which spins up the express app taking advantage of the great lib `supertest`.
 
 ### Technolgoy used
 
