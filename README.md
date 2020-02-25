@@ -34,7 +34,7 @@ npm test
 
 The server also includes integration test under `src/index.test.js`, which spins up the express app taking advantage of the great lib `supertest`.
 
-### Technolgoy used
+### Technology used
 
 Frontend:
 
