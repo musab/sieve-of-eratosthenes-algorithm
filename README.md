@@ -58,6 +58,4 @@ Backend
 
 ### Questions
 
-Musa Barighzaai
-<br>
 twitter: @musab
