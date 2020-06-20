@@ -23,7 +23,7 @@ npm install
 npm start
 ```
 
-Once the server is running, you need to start the client (run in seperate terminal tab)
+Once the server is running, you need to start the client (run in separate terminal tab)
 
 ```
 cd client
@@ -41,7 +41,7 @@ To run the tests, in either `server` or `client` execute the following:
 npm test
 ```
 
-The server also includes integration test under `src/index.test.js`, which spins up the express app taking advantage of the great lib `supertest`.
+The server also includes integration tests under `src/index.test.js`, which spins up the express app taking advantage of the great lib `supertest`.
 
 ### Technology used
 
