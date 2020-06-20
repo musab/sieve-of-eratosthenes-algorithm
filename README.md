@@ -4,8 +4,8 @@
 Given an upper limit of n, write a function that will find the median prime number(s) of the set of prime numbers less than n.
 
 ### Example
-- If n = 10, the set of prime numbers less than 10 is [2,3,5,7], and so the medians are [3,5]
-- If n = 18, the set of prime numbers less than 10 is [2,3,5,7,11,13,17], and so the medians are [7]
+- If `n = 10`, the set of prime numbers less than 10 is `[2,3,5,7]`, and so the medians are `[3,5]`.
+- If `n = 18`, the set of prime numbers less than 10 is `[2,3,5,7,11,13,17]`, and so the medians are `[7]`.
 
 ## Getting Started
 
