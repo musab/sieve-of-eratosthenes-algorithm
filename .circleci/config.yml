@@ -1,18 +1,31 @@
+# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
 version: 2.1
+
 orbs:
-  node: circleci/node@1.1.6
+  node: circleci/node@4.1
+
+executors:
+  my-custom-executor:
+    docker:
+      - image: cimg/node:lts  
+
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
+  build-my-project:
+    executor: my-custom-executor
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: cd ./server
-            - run: npm install
-            - run: npm test
+      - run: |
+          npm install
+          npm build 
+
 workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+  my-custom-workflow:
+    jobs:
+      - build-my-project
+  sample:
+    jobs:
+      - node/test:
+          version: '15.1'
+          # This is the node version to use for the `cimg/node` tag
+          # Relevant tags can be found on the CircleCI Developer Hub
+          # https://circleci.com/developer/images/image/cimg/node
