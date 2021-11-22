@@ -58,4 +58,4 @@ Backend
 
 ### Questions
 
-twitter: [@barighzaai](twitter.com/barighzaai)
+twitter: [@barighzaai](https://twitter.com/barighzaai)
